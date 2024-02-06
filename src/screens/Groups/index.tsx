@@ -1,5 +1,5 @@
 import { Image, TouchableOpacity, View } from 'react-native';
-import { ButtonCreateAccount, ButtonLogin, Container, Text, TextInput, Title } from './styles';
+import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Text, TextInput, Title } from './styles';
 import { CheckBox } from 'react-native-elements';
 import { useState } from 'react';
 
@@ -49,8 +49,21 @@ export default function Groups() {
    //textStyle={styles.label}
    />
 
-    
+<ButtonsContainer>
+<TouchableOpacity>
+  <ButtonLogin>
+  <Text>Login</Text>
+  </ButtonLogin>
+  </TouchableOpacity>
 
+  <TouchableOpacity>
+  <ButtonCreateAccount>
+  <Text>Criar conta</Text>
+  </ButtonCreateAccount>
+  </TouchableOpacity>
+</ButtonsContainer>
+    
+     {/*} <ButtonsContainer>
       <ButtonLogin>
       <TouchableOpacity >
         <Text>Login</Text>
@@ -62,6 +75,7 @@ export default function Groups() {
         <Text>Criar Conta</Text>
       </TouchableOpacity>
       </ButtonCreateAccount>
+  </ButtonsContainer> */}
 
      
        

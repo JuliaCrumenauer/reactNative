@@ -38,6 +38,16 @@ export const TextInput = styled.TextInput`
     
 `
 
+export const ButtonsContainer = styled.Text`
+  
+   flex-direction: row;
+   padding: 25px;
+   margin-left: 50;
+
+   
+
+`
+
 
 
 export const ButtonLogin = styled.Text`
@@ -49,6 +59,15 @@ export const ButtonLogin = styled.Text`
     align-items: center;
     width: 74px;
     height: 24px;
+
+    font-size: 18px;
+    
+   /* border-radius: 5px;
+    margin-right: 10px;
+    
+    button {
+        background-color: orange;
+    }*/
 `
 
 export const ButtonCreateAccount = styled.Text`
@@ -58,6 +77,6 @@ export const ButtonCreateAccount = styled.Text`
     text-align: center;
     align-content: center;
     align-items: center;
-    width: 74px;
-    height: 24px;
-`
+    
+    font-size: 18px;
+` 
