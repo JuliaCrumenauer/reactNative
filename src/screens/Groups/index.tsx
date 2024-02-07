@@ -15,6 +15,8 @@ export default function Groups() {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
+      
+      
     },
     inputContainer: {
       flexDirection: 'row',
@@ -23,6 +25,8 @@ export default function Groups() {
       borderColor: '#CCC',
       borderRadius: 10,
       paddingHorizontal: 10,
+      marginBottom: 20,
+      
     },
     icon: {
       width: 24,
@@ -34,6 +38,7 @@ export default function Groups() {
       height: 50,
       //borderColor: 'blue',
       borderWidth: 0,
+      marginTop: 5,
     },
   });
 
@@ -72,9 +77,7 @@ export default function Groups() {
           style={styles.icon}
         />
       </View>
-    </View>
-
-    <View style={styles.container}>
+   
       <View style={styles.inputContainer}>
         
         <TextInput
