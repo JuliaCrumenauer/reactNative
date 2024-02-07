@@ -81,3 +81,4 @@ export const ButtonCreateAccount = styled.Text`
     
     font-size: 18px;
 ` 
+

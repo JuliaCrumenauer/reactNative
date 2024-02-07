@@ -1,5 +1,5 @@
-import { Image, TouchableOpacity, View } from 'react-native';
-import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Icons, Text, TextInput, Title } from './styles';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Text, TextInput, Title } from './styles';
 import { CheckBox } from 'react-native-elements';
 import { useState } from 'react';
 
@@ -9,6 +9,33 @@ export default function Groups() {
   const imagePath = require('../../assets/ba.png');
 
   const mailPath = require('../../assets/mail.png');
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    inputContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      borderWidth: 1,
+      borderColor: '#CCC',
+      borderRadius: 10,
+      paddingHorizontal: 10,
+    },
+    icon: {
+      width: 24,
+      height: 24,
+      marginRight: 10,
+    },
+    input: {
+      flex: 1,
+      height: 50,
+      //borderColor: 'blue',
+      borderWidth: 0,
+    },
+  });
 
   
     const [isChecked, setIsChecked] = useState(false);
@@ -32,15 +59,48 @@ export default function Groups() {
        voluntária ou aprendiz.
      </Text>
 
-     <View>
+     <View style={styles.container}>
+      <View style={styles.inputContainer}>
+        
+        <TextInput
+          style={styles.input}
+          placeholder="E-mail"
+          placeholderTextColor="#888"
+        />
+        <Image
+          source={require('../../assets/mail.png')}
+          style={styles.icon}
+        />
+      </View>
+    </View>
+
+    <View style={styles.container}>
+      <View style={styles.inputContainer}>
+        
+        <TextInput
+          style={styles.input}
+          placeholder="Senha"
+          placeholderTextColor="#888"
+        />
+        <Image
+          source={require('../../assets/lock.png')}
+          style={styles.icon}
+        />
+      </View>
+    </View>
+
+     {/*<View>
        
        <TextInput
          
          placeholder="E-mail"
+         
         
        />
        
-        <Image source={mailPath} />
+        <Image source={mailPath} 
+        style={styles.icon}
+        />
        
 
       <TextInput
@@ -87,12 +147,12 @@ export default function Groups() {
       </ButtonCreateAccount>
   </ButtonsContainer> */}
 
-     
+     {/*}
        
      </View>
 
    
-    
+*/}
    
 
    </Container>
