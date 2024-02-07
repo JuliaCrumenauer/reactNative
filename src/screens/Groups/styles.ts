@@ -38,6 +38,7 @@ export const TextInput = styled.TextInput`
     
 `
 
+
 export const ButtonsContainer = styled.Text`
   
    flex-direction: row;

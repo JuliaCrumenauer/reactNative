@@ -1,5 +1,5 @@
 import { Image, TouchableOpacity, View } from 'react-native';
-import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Text, TextInput, Title } from './styles';
+import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Icons, Text, TextInput, Title } from './styles';
 import { CheckBox } from 'react-native-elements';
 import { useState } from 'react';
 
@@ -7,6 +7,8 @@ import { useState } from 'react';
 export default function Groups() {
 
   const imagePath = require('../../assets/ba.png');
+
+  const mailPath = require('../../assets/mail.png');
 
   
     const [isChecked, setIsChecked] = useState(false);
@@ -33,8 +35,13 @@ export default function Groups() {
      <View>
        
        <TextInput
+         
          placeholder="E-mail"
+        
        />
+       
+        <Image source={mailPath} />
+       
 
       <TextInput
          placeholder="Senha"
@@ -53,7 +60,10 @@ export default function Groups() {
 <TouchableOpacity>
   <ButtonLogin>
   <Text>Login</Text>
+  
   </ButtonLogin>
+ 
+ 
   </TouchableOpacity>
 
   <TouchableOpacity>
