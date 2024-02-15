@@ -10,13 +10,15 @@ export const Container = styled.View `
     border-color: orangered;
     border-radius: 4px;
 
+    align-items: center;
+
 
 `;
 
 export const Title = styled.Text`
     color: black;
     //color: #fff;
-    font-size: 32px;
+    font-size: 20px;
     align-items: center;
     text-align: center;
 `;

@@ -40,6 +40,11 @@ export default function Groups() {
       borderWidth: 0,
       marginTop: 5,
     },
+
+    imagem: {
+      width: 100,
+      height: 100,
+    },
   });
 
   
@@ -48,13 +53,12 @@ export default function Groups() {
     const handleCheckboxToggle = () => {
       setIsChecked(!isChecked);
     };
-
     
 
   return (
     <Container>
 
-      <Image source={imagePath} />
+      <Image source={imagePath} style={styles.imagem} />
    
      <Title>
        Bem vinde ao app BikeAnje! 
@@ -64,8 +68,12 @@ export default function Groups() {
        voluntária ou aprendiz.
      </Text>
 
+     <Text>Aaa</Text>
+
      <View style={styles.container}>
       <View style={styles.inputContainer}>
+
+        
         
         <TextInput
           style={styles.input}
@@ -90,7 +98,22 @@ export default function Groups() {
           style={styles.icon}
         />
       </View>
+
+<Text>Lembrar senha</Text><Text>Esqueceu sua senha?</Text>
+
     </View>
+
+    <Text>Ou entre com:</Text>
+    <Image
+          source={require('../../assets/facebook.png')}
+          style={styles.icon}
+        />
+        <Image
+          source={require('../../assets/instagram.png')}
+          style={styles.icon}
+        />
+
+    
 
      {/*<View>
        
