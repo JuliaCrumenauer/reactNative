@@ -45,6 +45,61 @@ export default function Groups() {
       width: 100,
       height: 100,
     },
+
+
+    container2: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      padding: 20,
+      gap: 6,
+    },
+    loginButton: {
+      backgroundColor: '#0386D0',
+      padding: 15,
+      borderRadius: 12,
+    },
+    createAccountButton: {
+      backgroundColor: 'white',
+      borderWidth: 2,
+      borderColor: '#0386D0',
+      padding: 15,
+      borderRadius: 12,
+    },
+    buttonText: {
+      color: 'white',
+      fontSize: 16,
+      fontWeight: 'bold',
+      textAlign: 'center',
+    },
+  
+    container3: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      padding: 20,
+    },
+
+    container4: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingHorizontal: 20,
+      marginTop: 20,
+      gap: 24,
+    },
+    leftContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    checkbox: {
+      marginRight: 5,
+    },
+    forgotPassword: {
+      color: 'blue',
+      textDecorationLine: 'underline',
+    },
+  
   });
 
   
@@ -61,14 +116,14 @@ export default function Groups() {
       <Image source={imagePath} style={styles.imagem} />
    
      <Title>
-       Bem vinde ao app BikeAnje! 
+       Boas vindas ao app BikeAnje! 
      </Title>
      <Text>
        Acesse sua conta de pessoa 
        voluntária ou aprendiz.
      </Text>
 
-     <Text>Aaa</Text>
+   
 
      <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -99,11 +154,34 @@ export default function Groups() {
         />
       </View>
 
-<Text>Lembrar senha</Text><Text>Esqueceu sua senha?</Text>
-
+      <View style={styles.container4}>
+      <View style={styles.leftContainer}>
+        {/* Checkbox */}
+        <Text style={styles.checkbox}>☑</Text>
+        <Text>Lembrar senha</Text>
+      </View>
+      <TouchableOpacity onPress={() => alert('Esqueceu sua senha?')}>
+        <Text style={styles.forgotPassword}>Esqueceu sua senha?</Text>
+      </TouchableOpacity>
+    </View>
     </View>
 
+<View style={styles.container2}>
+      <TouchableOpacity style={styles.loginButton}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.createAccountButton}>
+        <Text style={[styles.buttonText, {color: '#0386D0'}]}>Criar conta</Text>
+      </TouchableOpacity>
+    </View>
+
+    
+
+
+
     <Text>Ou entre com:</Text>
+    <View style={styles.container3}>
+    
     <Image
           source={require('../../assets/facebook.png')}
           style={styles.icon}
@@ -112,26 +190,14 @@ export default function Groups() {
           source={require('../../assets/instagram.png')}
           style={styles.icon}
         />
+    </View>
+
 
     
 
      {/*<View>
        
-       <TextInput
-         
-         placeholder="E-mail"
-         
-        
-       />
-       
-        <Image source={mailPath} 
-        style={styles.icon}
-        />
-       
 
-      <TextInput
-         placeholder="Senha"
-       />
 
 
    <CheckBox
