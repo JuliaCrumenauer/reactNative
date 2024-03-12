@@ -1,33 +1,37 @@
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
-import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Text, TextInput, Title } from './styles';
-import { CheckBox } from 'react-native-elements';
-import { useState } from 'react';
-
+import { StyleSheet, TouchableOpacity, View, TextInput, Button, Alert } from 'react-native';
+import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Text, TextInput2, Title, Image, InputContainer, ContainerInput } from './styles';
 
 export default function Groups() {
 
-  const imagePath = require('../../assets/ba.png');
+  //const imagePath = require('../../assets/ba.png');
+  const imagePath = require('../../assets/bikeanjo.jpg')
 
   const mailPath = require('../../assets/mail.png');
 
   const styles = StyleSheet.create({
-    container: {
-      flex: 1,
+    
+
+    containerInput: {
+        flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      
-      
+     
+     marginTop: 20,
     },
+
     inputContainer: {
       flexDirection: 'row',
       alignItems: 'center',
       borderWidth: 1,
       borderColor: '#CCC',
       borderRadius: 10,
-      paddingHorizontal: 10,
-      marginBottom: 20,
+      marginBottom: 1,
+      marginTop: 30,
       
+      height: 60,
+      paddingHorizontal: 10,
     },
+
     icon: {
       width: 24,
       height: 24,
@@ -35,35 +39,39 @@ export default function Groups() {
     },
     input: {
       flex: 1,
-      height: 50,
+      height: 40,
       //borderColor: 'blue',
       borderWidth: 0,
       marginTop: 5,
+      
     },
-
-    imagem: {
-      width: 100,
-      height: 100,
-    },
-
 
     container2: {
       flexDirection: 'row',
       justifyContent: 'space-around',
       alignItems: 'center',
       padding: 20,
-      gap: 6,
+      gap: 20,
+      marginBottom: 70,
+      marginTop: 50,
     },
     loginButton: {
-      backgroundColor: '#0386D0',
+      backgroundColor: '#00aeef',
       padding: 15,
+      borderWidth: 2,
+      borderColor: '#00aeef',
+      
       borderRadius: 12,
+      paddingVertical: 10,
+      paddingHorizontal: 20,
     },
     createAccountButton: {
       backgroundColor: 'white',
       borderWidth: 2,
-      borderColor: '#0386D0',
+      borderColor: '#00aeef',
       padding: 15,
+      paddingVertical: 10,
+      paddingHorizontal: 20,
       borderRadius: 12,
     },
     buttonText: {
@@ -78,6 +86,7 @@ export default function Groups() {
       justifyContent: 'space-around',
       alignItems: 'center',
       padding: 20,
+      
     },
 
     container4: {
@@ -96,41 +105,34 @@ export default function Groups() {
       marginRight: 5,
     },
     forgotPassword: {
-      color: 'blue',
+      color: '#00aeef',
       textDecorationLine: 'underline',
     },
   
   });
-
   
-    const [isChecked, setIsChecked] = useState(false);
-  
-    const handleCheckboxToggle = () => {
-      setIsChecked(!isChecked);
-    };
     
 
   return (
     <Container>
 
-      <Image source={imagePath} style={styles.imagem} />
+      <Image source={imagePath}  />
    
      <Title>
        Boas vindas ao app BikeAnje! 
      </Title>
-     <Text>
+     <Text style={{ fontSize: 18 }}>
        Acesse sua conta de pessoa 
        voluntária ou aprendiz.
      </Text>
 
    
 
-     <View style={styles.container}>
-      <View style={styles.inputContainer}>
-
-        
-        
-        <TextInput
+     <View style={styles.inputContainer}
+    >
+    
+    
+    <TextInput2
           style={styles.input}
           placeholder="E-mail"
           placeholderTextColor="#888"
@@ -139,11 +141,12 @@ export default function Groups() {
           source={require('../../assets/mail.png')}
           style={styles.icon}
         />
-      </View>
-   
-      <View style={styles.inputContainer}>
+        </View>
+
+<View style={styles.inputContainer}
+    >
         
-        <TextInput
+        <TextInput2
           style={styles.input}
           placeholder="Senha"
           placeholderTextColor="#888"
@@ -152,7 +155,9 @@ export default function Groups() {
           source={require('../../assets/lock.png')}
           style={styles.icon}
         />
+      
       </View>
+        
 
       <View style={styles.container4}>
       <View style={styles.leftContainer}>
@@ -164,14 +169,14 @@ export default function Groups() {
         <Text style={styles.forgotPassword}>Esqueceu sua senha?</Text>
       </TouchableOpacity>
     </View>
-    </View>
+    
 
 <View style={styles.container2}>
       <TouchableOpacity style={styles.loginButton}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.createAccountButton}>
-        <Text style={[styles.buttonText, {color: '#0386D0'}]}>Criar conta</Text>
+        <Text style={[styles.buttonText, {color: '#00aeef'}]}>Criar conta</Text>
       </TouchableOpacity>
     </View>
 
@@ -179,16 +184,16 @@ export default function Groups() {
 
 
 
-    <Text>Ou entre com:</Text>
+    <Text style={{ fontSize: 16 }}>Ou entre com:</Text>
     <View style={styles.container3}>
     
     <Image
           source={require('../../assets/facebook.png')}
-          style={styles.icon}
+          style={{width: 40, height: 40}}
         />
         <Image
           source={require('../../assets/instagram.png')}
-          style={styles.icon}
+          style={{width: 40, height: 40}}
         />
     </View>
 
