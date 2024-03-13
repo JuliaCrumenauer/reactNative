@@ -8,6 +8,9 @@ import { Loading } from './src/components/Loading'
 import theme from './src/theme/dark';
 
 import Groups from './src/screens/Groups';
+import Home from './src/screens/Home';
+
+
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
