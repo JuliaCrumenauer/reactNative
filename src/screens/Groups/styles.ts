@@ -7,13 +7,31 @@ export const Container = styled.View `
     padding: 24px;
 
     border: 4px;
-    border-color: orangered;
+    border-color: #f26522;
     border-radius: 4px;
 
     align-items: center;
 
-
 `;
+
+export const ContainerInput = styled.View `
+      //  flex: 1;
+    //  justify-content: center;
+     // align-items: center;
+     background-color: blue;
+     
+`
+
+export const InputContainer = styled.View `
+      flex-direction: row;
+      align-items: center;
+      border-width: 1px;
+      border-color: '#CCC';
+      border-radius: 10px;
+      //padding-horizontal: 10px;
+      
+      
+`
 
 export const Title = styled.Text`
     color: black;
@@ -29,7 +47,7 @@ export const Text = styled.Text`
     text-align: center;
 `
 
-export const TextInput = styled.TextInput`
+export const TextInput2 = styled.TextInput`
     width: 200px;
     height: 40px;
     border-color: lightgray;
@@ -47,14 +65,12 @@ export const ButtonsContainer = styled.Text`
    padding: 25px;
    margin-left: 50;
 
-   
-
 `
 
 
 
 export const ButtonLogin = styled.Text`
-    background-color: lightblue;
+    background-color: #00aeef;
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -83,4 +99,9 @@ export const ButtonCreateAccount = styled.Text`
     
     font-size: 18px;
 ` 
+
+export const Img = styled.Image`
+width: 100px;
+height: 100px;
+`
 

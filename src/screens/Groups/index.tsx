@@ -1,5 +1,5 @@
 import { StyleSheet, TouchableOpacity, View, TextInput, Button, Alert } from 'react-native';
-import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Text, TextInput2, Title, Image, InputContainer, ContainerInput } from './styles';
+import { ButtonCreateAccount, ButtonLogin, ButtonsContainer, Container, Text, TextInput2, Title, InputContainer, ContainerInput, Img } from './styles';
 
 export default function Groups() {
 
@@ -116,14 +116,14 @@ export default function Groups() {
   return (
     <Container>
 
-      <Image source={imagePath}  />
+      <Img source={imagePath}  />
    
      <Title>
-       Boas vindas ao app BikeAnje! 
+       Boas vindas ao app BikeAnjo! 
      </Title>
-     <Text style={{ fontSize: 18 }}>
+     <Text style={{ fontSize: 16 }}>
        Acesse sua conta de pessoa 
-       voluntária ou aprendiz.
+       voluntária ou aprendiz
      </Text>
 
    
@@ -137,7 +137,7 @@ export default function Groups() {
           placeholder="E-mail"
           placeholderTextColor="#888"
         />
-        <Image
+        <Img
           source={require('../../assets/mail.png')}
           style={styles.icon}
         />
@@ -151,7 +151,7 @@ export default function Groups() {
           placeholder="Senha"
           placeholderTextColor="#888"
         />
-        <Image
+        <Img
           source={require('../../assets/lock.png')}
           style={styles.icon}
         />
@@ -187,11 +187,11 @@ export default function Groups() {
     <Text style={{ fontSize: 16 }}>Ou entre com:</Text>
     <View style={styles.container3}>
     
-    <Image
+    <Img
           source={require('../../assets/facebook.png')}
           style={{width: 40, height: 40}}
         />
-        <Image
+        <Img
           source={require('../../assets/instagram.png')}
           style={{width: 40, height: 40}}
         />
