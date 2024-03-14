@@ -16,4 +16,12 @@ export const Container2 = styled.View `
     
     gap: 3px;
 
-`;
+`
+;
+
+export const ContainerHome = styled.View `
+    flex: 1;
+    //flex-direction: row;
+    justify-content: center;
+    align-items: center;
+`
