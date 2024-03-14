@@ -20,7 +20,7 @@ export default function App() {
       <StatusBar
         barStyle="default"
       />
-      { fontsLoaded ?  <Groups /> : <Loading /> } 
+      { fontsLoaded ?  <Home /> : <Loading /> } 
     </ThemeProvider>
   );
 }
